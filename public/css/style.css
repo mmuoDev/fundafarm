@@ -82,8 +82,8 @@ banner
 
 .navbar-brand
 {
-	font-family: 'Chewy', cursive;
-	font-size: 32px;
+	font-family: Arial;
+	font-size: 22px;
 }
 
 .navbar-brand img {
@@ -160,7 +160,7 @@ banner
 	padding-bottom:15px; 
 }
 .btn-appoint, .btn-appoint:hover, .btn-appoint:focus{
-	margin-top: 30px;
+	margin-top: 10px;
 	padding: 10px 20px;
 	font-size: 12px;
 	background-color: rgba(12, 184, 182, 0.91);
@@ -525,7 +525,7 @@ footer
     }
     .caption p{
     font-size: 12px;
-    padding-bottom: 5px;
+    padding-bottom: 0px;
     }
     .caption ul li a i{
         font-size: 14px;
@@ -533,4 +533,84 @@ footer
     .banner-text h1{
         font-size: 24px;
     }
+
+    .btn-details, .btn-details:hover, .btn-details:focus{
+        margin-top: 1px;
+        padding: 1px 1px;
+        font-size: 12px;
+        background-color: rgba(12, 184, 182, 0.91);
+        border-radius: 3px;
+        color: #fff;
+    }
+
+}
+.bbb {
+    position: relative;
+}
+
+.image {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 95%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+}
+
+.bbb:hover .overlay {
+    opacity: 1;
+}
+
+.text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+.navbar-custom {
+    background-color: rgba(28,74,90, 0.9);
+    color:#ffffff;
+    border-radius:0;
+    margin-bottom: 10px;
+}
+
+.navbar-custom .navbar-nav > li > a {
+    color:#fff;
+}
+
+.navbar-custom .navbar-nav > .active > a {
+    color: #ffffff;
+    background-color:transparent;
+}
+
+.navbar-custom .navbar-nav > li > a:hover,
+.navbar-custom .navbar-nav > li > a:focus,
+.navbar-custom .navbar-nav > .active > a:hover,
+.navbar-custom .navbar-nav > .active > a:focus,
+.navbar-custom .navbar-nav > .open >a {
+    text-decoration: none;
+    background-color:  rgba(12, 184, 182, 0.91)
+}
+
+.navbar-custom .navbar-brand {
+    color:#eeeeee;
+}
+.navbar-custom .navbar-toggle {
+    background-color:#eeeeee;
+}
+.navbar-custom .icon-bar {
+    background-color:#33aa33;
 }

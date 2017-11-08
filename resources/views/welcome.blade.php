@@ -44,7 +44,7 @@
                             <p>Choose from any of our farms, invest in a farm and get your share of the profit.<br>
                                 We are doing this to increase Nigeria's agricultural production and ensure the country is food secured.
                               </p>
-                            <a href="#contact" class="btn btn-appoint">Request More Info.</a>
+                            <a href="{{url('/login')}}" class="btn btn-appoint">Sign In</a>
                             <a href="#farms" class="btn btn-appoint" >Our Farms</a>
                         </div>
                         <div class="overlay-detail text-center">
@@ -121,14 +121,18 @@
                     <hr class="botm-line">
                 </div>
                 @foreach($items as $item)
-                    <div class="col-md-3 col-sm-3 col-xs-6">
-                        <div class="thumbnail">
-                            <img src="{{asset('img/farms/'.$item->link)}}" height="100px" alt="..." class="team_img">
+                    <div class="col-md-3 col-sm-3 col-xs-6 bbb">
+                        <div class="thumbnail image">
+                            <img src="{{asset('img/farms/'.$item->link)}}" height="100px" alt="..." class="team_img" >
                             <div class="caption">
-                                <h3 style="color: red;">{{ucfirst($item->produce)}}</h3>
-                                <h3>₦{{number_format($item->cost)}}</h3>
-                                <h3>Returns {{$item->returns}}% in {{$item->duration}}</h3>
-                                <a href="#" class="btn btn-appoint">Invest Now</a>
+                                <h4 style="color: red;">{{ucfirst($item->produce)}}</h4>
+                                <h5>₦{{number_format($item->cost)}}</h5>
+                                <h5>Returns {{$item->returns}}% in {{$item->duration}}</h5>
+                                <div class="overlay">
+                                    <div class="text">
+                                        <a href="{{url('farms/details/'.$item->produce_id)}}" class="btn btn-appoint">Invest Now</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -254,4 +258,8 @@
     </footer>
     <!--/ footer-->
     </body>
+@endsection
+
+@section('scripts')
+
 @endsection

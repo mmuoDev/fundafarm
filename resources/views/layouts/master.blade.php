@@ -19,10 +19,12 @@
     @yield('content')
 
     <!--Load Javascript files -->
-    <script src="js/jquery.min.js" src="{{asset('js/jquery.min.js')}}"></script>
+    <script  src="{{asset('js/jquery.min.js')}}"></script>
     <script src="{{asset('js/jquery.easing.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
     <script src="{{asset('js/custom.js')}}"></script>
     <script src="{{asset('contactform/contactform.js')}}"></script>
     <!--Load Javascript files -->
+
+    @yield('scripts')
 </html>

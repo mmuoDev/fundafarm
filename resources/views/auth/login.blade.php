@@ -60,6 +60,11 @@
                                 </a>
                             </div>
                         </div>
+                        <div class="form-group">
+                            <div class="col-md-8 col-md-offset-4">
+                                <p>Not registered yet? <a href="{{'/register'}}">Register here</a> </p>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
