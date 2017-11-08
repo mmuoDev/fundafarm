@@ -130,7 +130,7 @@
                                 <h5>Returns {{$item->returns}}% in {{$item->duration}}</h5>
                                 <div class="overlay">
                                     <div class="text">
-                                        <a href="{{url('farms/details/'.$item->produce_id)}}" class="btn btn-appoint">Invest Now</a>
+                                        <a href="{{url('farms/details/'.$item->produce_id)}}" class="btn btn-appoint">Details</a>
                                     </div>
                                 </div>
                             </div>

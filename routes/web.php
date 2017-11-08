@@ -24,4 +24,6 @@ Route::get('register/verify/{email}/{confirmationCode}', [
 Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('farms/details/{id}', 'IndexController@farm_details');
+Route::get('/farms/available', 'HomeController@available_farms');
+Route::match(['post', 'get'], 'farms/invest', 'HomeController@invest_farm');
 
