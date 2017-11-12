@@ -25,7 +25,6 @@
                                 <li class="active"><a href="#banner">Home</a></li>
                                 <li class=""><a href="#service">Services</a></li>
                                 <li class=""><a href="#farms">Our Farms</a></li>
-                                <li class=""><a href="#contact">Contact</a></li>
                             </ul>
                         </div>
                     </div>
@@ -44,7 +43,11 @@
                             <p>Choose from any of our farms, invest in a farm and get your share of the profit.<br>
                                 We are doing this to increase Nigeria's agricultural production and ensure the country is food secured.
                               </p>
-                            <a href="{{url('/login')}}" class="btn btn-appoint">Sign In</a>
+                            @if(Auth::guest())
+                            <a href="{{url('/login')}}" class="btn btn-appoint2">Sign In</a>
+                            @else
+                                <a href="{{url('/home')}}" class="btn btn-appoint2">Dashboard</a>
+                            @endif
                             <a href="#farms" class="btn btn-appoint" >Our Farms</a>
                         </div>
                         <div class="overlay-detail text-center">
@@ -143,58 +146,14 @@
     <!--/ doctor team-->
     <!--cta-->
     <!--contact-->
-    <section id="contact" class="section-padding">
+    <!--/ contact-->
+    <!--footer-->
+    <section id="farms" class="section-padding">
         <div class="container">
             <div class="row">
-                <div class="col-md-12">
-                    <h2 class="ser-title">Contact us</h2>
-                    <hr class="botm-line">
-                </div>
-                <div class="col-md-4 col-sm-4">
-                    <h3>Contact Info</h3>
-                    <div class="space"></div>
-                    <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>25 Warehouse road<br>
-                        Lagos State, Nigeria</p>
-                    <div class="space"></div>
-                    <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@fundafarm.ng</p>
-                    <div class="space"></div>
-                    <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+23480 633 21043</p>
-                </div>
-                <div class="col-md-8 col-sm-8 marb20">
-                    <div class="contact-info">
-                        <h3 class="cnt-ttl">Having Any Query! Or Book an appointment</h3>
-                        <div class="space"></div>
-                        <div id="sendmessage">Your message has been sent. Thank you!</div>
-                        <div id="errormessage"></div>
-                        <form action="" method="post" role="form" class="contactForm">
-                            <div class="form-group">
-                                <input type="text" name="name" class="form-control br-radius-zero" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                                <div class="validation"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" class="form-control br-radius-zero" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                                <div class="validation"></div>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" class="form-control br-radius-zero" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                                <div class="validation"></div>
-                            </div>
-                            <div class="form-group">
-                                <textarea class="form-control br-radius-zero" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                                <div class="validation"></div>
-                            </div>
-
-                            <div class="form-action">
-                                <button type="submit" class="btn btn-form">Send Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
-    <!--/ contact-->
-    <!--footer-->
     <footer id="footer">
         <div class="top-footer">
             <div class="container">
@@ -211,14 +170,15 @@
                     </div>
                     <div class="col-md-4 col-sm-4 marb20">
                         <div class="ftr-tle">
-                            <h4 class="white no-padding">Quick Links</h4>
+                            <h4 class="white no-padding">Contact Us</h4>
                         </div>
                         <div class="info-sec">
-                            <ul class="quick-info">
-                                <li><a href="index.html"><i class="fa fa-circle"></i>Home</a></li>
-                                <li><a href="#service"><i class="fa fa-circle"></i>Service</a></li>
-                                <li><a href="#contact"><i class="fa fa-circle"></i>Appointment</a></li>
-                            </ul>
+                                <p><i class="fa fa-map-marker fa-fw pull-left fa-2x"></i>25 Warehouse road<br>
+                                    Lagos State, Nigeria</p>
+                                <div class="space"></div>
+                                <p><i class="fa fa-envelope-o fa-fw pull-left fa-2x"></i>info@fundafarm.ng</p>
+                                <div class="space"></div>
+                                <p><i class="fa fa-phone fa-fw pull-left fa-2x"></i>+23480 633 21043</p>
                         </div>
                     </div>
                     <div class="col-md-4 col-sm-4 marb20">
@@ -228,8 +188,10 @@
                         <div class="info-sec">
                             <ul class="social-icon">
                                 <li class="bglight-blue"><i class="fa fa-facebook"></i></li>
+                                {{--
                                 <li class="bgred"><i class="fa fa-google-plus"></i></li>
                                 <li class="bgdark-blue"><i class="fa fa-linkedin"></i></li>
+                                --}}
                                 <li class="bglight-blue"><i class="fa fa-twitter"></i></li>
                             </ul>
                         </div>

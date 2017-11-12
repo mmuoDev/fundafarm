@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Fundafarm.NG | Dashboard</title>
+    <title>@yield('title')</title>
     <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}" >
     <!-- Bootstrap -->
     <link href="{{asset('/assets/bootstrap/dist/css/bootstrap.min.css')}}" rel="stylesheet">
@@ -34,7 +34,7 @@
         <div class="col-md-3 left_col">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="index.html" class="site_title"><span>Fundafarm.NG</span></a>
+                    <a href="{{url('/')}}" class="site_title"><span>Fundafarm.NG</span></a>
                 </div>
 
                 <div class="clearfix"></div>
@@ -42,8 +42,8 @@
                 <!-- menu profile quick info -->
                 <div class="profile clearfix">
                     <div class="profile_info">
-                        <span>Welcome,</span>
-                        <h2>John Doe</h2>
+                        <span>Kaabo!</span>
+                        <h2>{{Auth::user()->name}}</h2>
                     </div>
                 </div>
                 <!-- /menu profile quick info -->
@@ -97,6 +97,8 @@
 
 <!-- Custom Theme Scripts -->
 <script src="{{asset('/build/js/custom.min.js')}}"></script>
+<script src="{{asset('/js/script.js')}}"></script>
+@yield('script')
 
 </body>
 </html>

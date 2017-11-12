@@ -64,8 +64,8 @@ Farm Details for {{ucfirst($item->produce)}}
                             <td><strong> <i class="fa fa-hand-o-right" aria-hidden="true"></i> What next?</strong></td>
                             <td>
                                 <div style="display: block;">
-                                    <a href="" class="btn btn-danger">Invest Now</a>
-                                    <a href="" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Request More Details</a>
+                                    <a href="{{url('/home')}}" class="btn btn-appoint">Invest Now</a>
+                                    <a href="" class=" btn btn-appoint3" data-toggle="modal" data-target="#myModal">Request More Details</a>
                                 </div>
                             </td>
                         </tr>

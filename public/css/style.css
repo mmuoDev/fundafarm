@@ -614,3 +614,29 @@ footer
 .navbar-custom .icon-bar {
     background-color:#33aa33;
 }
+
+.info-number-2 .badge{
+    font-size:10px;
+    font-weight:400;
+    line-height:13px;
+
+    position:absolute;
+    right:0px;top:8px}
+.btn-appoint2, .btn-appoint2:hover, .btn-appoint2:focus{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: white;
+    border-radius: 3px;
+    color:  rgba(12, 184, 182, 0.91);
+}
+.btn-appoint3, .btn-appoint3:hover, .btn-appoint3:focus{
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 12px;
+    background-color: indianred;
+    border-radius: 3px;
+    color:  white;
+}
+
+
