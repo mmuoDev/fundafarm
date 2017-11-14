@@ -20,9 +20,12 @@ Route::get('/', 'IndexController@index');
 Auth::routes();
 
 Route::get('/test', function(){
-    $count = DB::select("select a.*, b.* from farm_invest as a, farm_progress as b where 
-                a.farm_id = b.farm_id and a.status = 3 and b.farm_id = 3");
-    dd(count($count));
+    $email = 'radioactive.uche11@gmail.com';
+    Mail::send('email.test', [], function ($message) use ($email) {
+        $message->to($email);
+        $message->from('hello@fundafarm.ng', 'Fundafarm.NG Team');
+        $message->subject('Please confirm account details');
+    });
 
 });
 Route::get('/markAsRead/{id}', 'HomeController@markAsRead');
